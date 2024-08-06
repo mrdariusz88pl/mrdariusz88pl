@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<style>
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+    .logo {
+        text-align: center;
+        padding: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        margin: 10px;
+    }
+</style>
+</head>
+<body>
+<div class="logo">
+    <img src="https://drive.google.com/uc?id=1HcsHQwH3L8TdGBhqqC1OiP4Iewt-Vjw-" alt="Logo" style="max-width: 200px;">
+</div>
+
+<div style="text-align: center;">
+    <button onclick="register()">Zarejestruj się</button>
+    <button onclick="login()">Zaloguj się</button>
+</div>
+
+<script>
+    function register() {
+        let registerWindow = prompt("Do Rejestracji\nPodaj Nick\nPodaj Adres E-mail\nPodaj Hasło\nPowtórz Hasło");
+        if (registerWindow !== null) {
+            // Tutaj można przeprowadzić walidację i potwierdzenie rejestracji
+            alert("Rejestracja zakończona pomyślnie!");
+        }
+    }
+
+    function login() {
+        let loginWindow = prompt("Zaloguj się\nPodaj Nick\nPodaj Hasło");
+        if (loginWindow !== null) {
+            // Tutaj można przeprowadzić walidację logowania
+            if (loginWindow === "przykładowyNick przykładoweHasło") {
+                if (confirm("Zalogowano pomyślnie! Czy chcesz przejść do strony excel-like-table.html?")) {
+                    window.location.href = "excel-like-table.html";
+                }
+            } else {
+                alert("Błędny login lub hasło!");
+            }
+        }
+    }
+</script>
+
+<div style="text-align: right; padding: 20px;">
+    <span style="background-color: red;">Made Dariusz Szczesny, @mrdeliriousuk</span>
+</div>
+
+</body>
+</html>
